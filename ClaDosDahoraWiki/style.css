@@ -1,0 +1,26 @@
+#header .jumbotron{
+    background: url(https://images.unsplash.com/photo-1517315003714-a071486bd9ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80) center 15% / cover no-repeat;
+}
+
+.card-columns{
+    column-count: 4;
+}
+
+#showcase #citation{
+    font-size: 1rem;
+}
+
+#star{
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+#imgPerson{
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+}
+
+#showcase img:hover{
+    opacity: 0.8;
+}
