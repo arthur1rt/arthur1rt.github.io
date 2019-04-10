@@ -1,4 +1,4 @@
-Manhas{
+Manhas{ *
     nome: Matheus Manhas
     nick: Manhas
     chamado de : Banhas
@@ -7,9 +7,11 @@ Manhas{
     descrição: Matheus Manhas, aos seus 22 anos de idade joga um lolzinho na role de ADC. Um dos membros estrela do clã dos dahora.
     desempregado
     amante de plantas medicinais
+
+    "Maconha não queima neuronios"
 }
 
-Higor{
+Higor{ *
     nome: Higor Borges
     nick: Aiko
     chamado de: Higor
@@ -23,7 +25,7 @@ Higor{
 
 }
 
-Weiky{
+Weiky{ *
     nome: Weiky Gustavo
     nick: Weiky
     chamado de: Weiky
@@ -33,6 +35,8 @@ Weiky{
     ex-matematico (2 anos)
     challenger
     robô
+
+    "É né"
 }
 
 Cesar{
@@ -43,6 +47,8 @@ Cesar{
 
     descrição:
     dark-souls lover
+
+    "Vou dar só uma deitadinha"
 }
 
 Elemento{
@@ -55,9 +61,11 @@ Elemento{
     lacrador
     elise
     pw
+
+    ""
 }
 
-bilba{
+bilba{ *
     nome: Danillo Teodoro do Nascimento
     nick: Beto Carrero
     chamado de: bilba
@@ -66,10 +74,13 @@ bilba{
     descricao:
     ecologia
     versátil
+
+    ""
 }
 
-eu{
+eu{ 
 
+    ""
 }
 
 Jhon{
@@ -82,9 +93,11 @@ Jhon{
     batata frita
     casado
     saboneteira
+
+    "a batata ta pronta?"
 }
 
-Xexo{
+Xexo{ 
     nome: André Felipe
     nick: Xexo
     chamado de: Xexo
@@ -94,9 +107,11 @@ Xexo{
     rico
     medico
     12 pizzas
+
+    ""
 }
 
-Cassio{
+Cassio{ *
     nome: Cassio Souza
     nick: TheColdOne
     chamado de: Cassio
@@ -106,14 +121,21 @@ Cassio{
     loiro
     cabeludo
     quebrador de portas    
+
+    "Daqui 3 anos eu to casado"
 }
 
 koala{
     nome: vinicius kunert
     nick: koalanegao
+    idade: 20
     chamado de: koala
 
     descrição:
+    eng. da comp
+
+
+    ""
 }
 
 Katatau{
@@ -123,4 +145,6 @@ Katatau{
 
     descrição:
     vagabundo
+
+    "Ó comé qui nois ta"
 }
