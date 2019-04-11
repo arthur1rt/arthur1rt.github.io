@@ -17,7 +17,7 @@ Higor{ *
     chamado de: Higor
     idade: 22
 
-    descricao:
+    descricao: Atualmente desempregado, Higor é conhecido por ser o faz-tudo do clã. Técnifo em informatica formado pela instituição de ensino YouTube. Atualmente main Zilean (ex-main Lux).
     desempregado
     faz-tudo
     tecnico de informatica do clã
