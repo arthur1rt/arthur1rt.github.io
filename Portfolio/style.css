@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(22, 22, 22) !important;
+}
+
+body p a{
+    color: rgb(219, 219, 117);    
+}
+
+body p a:hover{
+    color: rgb(243, 243, 75);   
+    text-decoration: none;
+}
+
+button a{
+    color: lightgray;
+}
+
+.card-img{
+    object-fit: cover;
+    height: 100%;
+    max-height: 17em;
+}
+
+.card-img-top{
+    object-fit: cover;
+    height: 100%;
+    max-height: 17em;
+}
+
+.card{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#featured .card{
+    max-width: 510px;
+    margin: auto;
+    margin-top: 50px;
+}
+
