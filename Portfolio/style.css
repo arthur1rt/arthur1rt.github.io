@@ -33,8 +33,13 @@ button a{
     margin-top: 50px;
 }
 
+#featured .card-img-top{
+    height: 50%;
+    max-height: 10em;
+}
+
 #featured .card{
-    max-width: 510px;
+    max-width: 900px;
     margin: auto;
     margin-top: 50px;
 }
