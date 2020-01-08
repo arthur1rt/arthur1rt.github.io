@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(22, 22, 22) !important;
+}
+
+body p a{
+    color: rgb(219, 219, 117);    
+}
+
+body p a:hover{
+    color: rgb(243, 243, 75);   
+    text-decoration: none;
+}
+
+button a{
+    color: lightgray;
+}
+
+.container{
+    margin-bottom: 20px;
+}
+
+.container .card-img{
+    object-fit: cover;
+    height: 100%;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.container .card{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+    border: 3px solid rgb(44, 44, 44);
+    border-radius: 10px;
+}
+
+.comments{
+    font-style: italic;
+    color: rgb(88, 88, 88);
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+
+#featured .card-img-top{
+    height: 50%;
+    max-height: 10em;
+}
+
+#featured .card{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.nav-link{
+    color: lightgrey;
+}
+
+.nav-link:hover{
+    color: lightgrey;
+}
+
