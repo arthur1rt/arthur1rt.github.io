@@ -27,7 +27,6 @@ button a{
 }
 
 .container .card{
-    max-width: 900px;
     margin: auto;
     margin-top: 50px;
     border: 3px solid rgb(44, 44, 44);
@@ -48,7 +47,6 @@ button a{
 }
 
 #featured .card{
-    max-width: 900px;
     margin: auto;
     margin-top: 50px;
 }
