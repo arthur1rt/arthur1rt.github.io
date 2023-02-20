@@ -1,0 +1,18 @@
+allMcNames = [
+    "Tubarão (SP)",
+    "Jhony (RJ)",
+    "Guri (SP)",
+    "Prado (SP)",
+    "Brennuz (SP)",
+    "Magrão (SP)",
+    "Japa (BA)",
+    "Bask (SP)",
+    "Alves (DF)",
+    "Nonô (DF)",
+    "Balota (DF)",
+    "Neo BXD (RJ)",
+    "Hate (DF)",
+    "Zen (DF)",
+    "Jeffe (DF)",
+    "Pedog (DF)",
+];

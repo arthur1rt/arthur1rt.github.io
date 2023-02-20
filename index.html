@@ -1,518 +1,248 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="shortcut icon" href="./Files/favicon.ico" type="image/x-icon">
-  <title>Arthur R Teles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Cutting Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <nav class="navbar navbar-dark rounded w-75" style="margin: auto; margin-top: 100px; ">
-      <a class="navbar-brand text-light"><i class="fas fa-code"></i> Arthur R Teles</a>
-      <form class="form-inline">
-        <a target="_blank" href="http://fb.com/arthurrteles" class="text-light mr-2" style="font-size: 35px;"><i
-            class="fab fa-facebook-square"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/arthurrteles/" class="text-light mr-2"
-          style="font-size: 35px;"><i class="fab fa-linkedin"></i></a>
-        <a target="_blank" href="https://store.steampowered.com/search/?developer=Arthur%20R%20Teles" class="text-light"
-          style="font-size: 35px;"><i class="fab fa-steam-square"></i></a>
-      </form>
-    </nav>
+    <div id="CuttinTool" class="mx-auto text-center">
+        <div id="Content" class="mx-auto">
+
+            <h1 style="color:white;">Video Cutting Tool</h1>
+
+            <br>
+
+            <div id="BattleInfo" class="row g-3 mx-auto">
+                <div class="col-lg-12 col-xl-4">
+                    <select id="AllBattleNames" class="form-select form-select mb-3">
+                        <option value="-1" selected hidden>xxxxxxxxxx xx xxxxxxxx</option>
+                        <!-- <option value="1">Batalha da Aldeia</option> -->
+                    </select>
+                </div>
+                <div class="col-lg-6 col-xl-2">
+                    <div class="input-group input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">#</span>
+                        <input type="text" class="form-control" placeholder="###" id="EditionNumber">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                    <select id="BattleDay" class="form-select form-select mb-3">
+                        <option value="-1" selected hidden>Dia</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                    <select id="BattleMonth" class="form-select form-select mb-3">
+                        <option value="-1" selected hidden>Mês</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                    <select id="BattleYear" class="form-select form-select mb-3">
+                        <option value="-1" selected hidden>Ano</option>
+                    </select>
+                </div>
+            </div>
 
 
-    <div class="text-center" style="color: rgb(250, 250, 250); margin-top: 50px;">
-      <h1 class="display-4 p-0 m-0">Hello, I'm Arthur!</h1>
-      <h1 class="display-4 p-0 m-0" style="font-size:30px; margin-bottom: 0px;">I am a Game Developer.
-      </h1>
+            <br>
 
-      <p class="lead mt-3" style="margin:auto; margin-bottom: 20px; font-size: 16px; width: 50%;">I've been designing
-        and programming games since 2014, when I started my first college. I have released many different titles, from
-        personal projects to commissions. The games were published across
-        different platforms including Steam, Google Play, and Itch.io.</p>
+            <div id="AllVideosFromBattle">
+
+            </div>
+
+            <!-- <div class="d-flex justify-content-start"> -->
+            <button class="btn btn-primary" type="button" id="AddBattle">Adicionar Batalha</button>
+            <!-- </div> -->
+
+
+        </div>
     </div>
 
-    <div class="text-center mb-3" style="color: rgb(250, 250, 250); margin-top: 60px;">
-      <h1 class="display-4 p-0" style="font-size:30px; margin-bottom: 0px;"><i class="fas fa-chevron-down"
-          style="font-size: 20px;"></i> My Projects
-        <i class="fas fa-chevron-down" style="font-size: 20px;"></i>
-      </h1>
-    </div>
-    <!-- new game goes under here -->
-
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/8bitblockly.gif" class="card-img" alt="A GIF DEMONSTRATION OF 8BIT BLOCKLY">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">8Bit Blockly (2021)</h3>
-            <p class="card-text mb-0">8Bit Blockly is a puzzle game that uses a block-based visual coding language
-              as player input.
-              <br> Guide the beaver to his child by coding its movements! Bonus points if you can figure out a way of
-              collecting the star.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-            <button type="button" class="btn btn-success btn-sm mb-1 "
-              style='background-color: #45156c; border-color: #45156c;' disabled>PixelPAD (Python)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Web Game</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Commision</button>
-            <a href="https://pixelpad.io/app/pjucdnfgzsw/" target="_blank" class="btn btn-block btn-success mt-1 mb-0"
-              role="button" aria-pressed="true"><i class="fas fa-gamepad"></i>
-              PixelPAD</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/driftersdontbrake.gif" class="card-img"
-            alt="A GIF DEMONSTRATION OF DRIFTERS DON'T BRAKE">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Drifters Don't Brake (2021)</h3>
-            <p class="card-text mb-0">Drifters Don't Brake provides a very satisfying <i>drifting</i> experience.
-              <br>
-              D.D.B. differs from other games of the genre by being a rage game and not allowing the player to control
-              whether the car is
-              accelerating or not. In D.D.B. your car is always accelerating!
-              The only way of reducing the car's speed is by <i>drifting</i>.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-            <button type="button" class="btn btn-success btn-sm mb-1" disabled>GameMaker (GML)</button>
-            <button type="button" class="btn btn-primary btn-sm mb-1 " disabled>Steam</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>GameJam</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>GMTK2020</button>
-            <a href="https://store.steampowered.com/app/1391610/Drifters_Dont_Brake/" target="_blank"
-              class="btn btn-block btn-info mt-1 mb-0" role="button" aria-pressed="true"><i class="fab fa-steam"></i>
-              Steam</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/terrario.gif" class="card-img" alt="A GIF DEMONSTRATION OF DRIFTERS DON'T BRAKE">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Terrario (2021)</h3>
-            <p class="card-text mb-0">
-              Collect blocks around the map to build your own constructions. Use your imagination and creativity to come
-              up with anything you want!
-              <br>
-              Can you find and collect all the rare blocks?
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-            <button type="button" class="btn btn-success btn-sm mb-1 "
-              style='background-color: #45156c; border-color: #45156c;' disabled>PixelPAD (Python)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Web Game</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Commision</button>
-            <a href="https://pixelpad.io/app/qztvgqwrrlr/" target="_blank" class="btn btn-block btn-success mt-1 mb-0"
-              role="button" aria-pressed="true"><i class="fas fa-gamepad"></i>
-              PixelPAD</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/rapidharvest.gif" class="card-img" alt="A GIF DEMONSTRATION OF DRIFTERS DON'T BRAKE">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Rapid Harvest (2021)</h3>
-            <p class="card-text mb-0">
-              Get the custormer's order and deliver every item he wants before you run out of time.
-              <br>
-              You will earn some money for delivering the order, but you will lose money if you can't gather all the
-              items before the time is over.
-              <br>
-              How fast are you?
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 "
-              style='background-color: #45156c; border-color: #45156c;' disabled>PixelPAD (Python)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Web Game</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Commision</button>
-            <a href="https://pixelpad.io/app/ekllpsxdrnt/" target="_blank" class="btn btn-block btn-success mt-1 mb-0"
-              role="button" aria-pressed="true"><i class="fas fa-gamepad"></i>
-              PixelPAD</a>
-          </div>
-        </div>
-      </div>
+    <div style="width: 87.5%;" class="d-flex justify-content-end">
+        <form method="post" action="mailSender.php">
+            <button style="width: 20%;" type="button" class="btn btn-success my-4" onclick="exportAllData()">Download
+                Data</button>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 
 
-    <!-- <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/pokemun.gif" class="card-img" alt="A GIF DEMONSTRATION OF DRIFTERS DON'T BRAKE">
+
+
+    <!-- ALL OF THESE ARE HIDDEN :) -->
+
+
+    <!-- NEW BATTLE -->
+    <div id="NewBattle" style="display:none;" class="mb-5 py-3">
+        <div id="BattleContent" class="mx-auto">
+
+            <a class="btn btn-light m-0" data-bs-toggle="collapse" id="collapseButton" href="#collapsedBattleId"
+                role="button" style="width: 100%; font-size: 22px; font-weight: bold;">
+                Battle #1
+            </a>
+            <div class="collapse show collapsedContent" id="collapsedBattleId">
+
+                <input id="YoutubeLink" class="form-control mx-auto mt-3" type="text" placeholder="YouTube Link">
+
+
+                <!-- ADD MCS -->
+                <div id="McsInBattleBg" class="mt-3 pb-3 mx-auto">
+                    <h3>Mcs Batalhando</h3>
+                    <div id="McsInBattle" class="mt-3">
+
+                    </div>
+
+                    <div class="autocomplete mt-2" style="min-width:100px; width:50%;">
+                        <input class=" form-control form-control-sm text-center" id="McNamesInput" type="text"
+                            name="mcName" placeholder="Nome do MC">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm" id="AddMc">Adicionar</button>
+
+                </div>
+
+                <!-- ADD VIDEO CUTS -->
+                <div id="VideoCutsBg" class="mt-3 pb-3 mx-auto">
+                    <h3>Todos os Cortes</h3>
+                    <div id="AllVideoCuts" class="">
+
+                    </div>
+
+                    <button type="button" class="btn btn-primary mt-3" id="AddCut">Adicionar Corte</button>
+
+                </div>
+
+                <button type="button" class="btn btn-danger btn-sm mt-4 " id="DeleteBattle"
+                    style="width: 20%; min-width: 100px;" data-bs-toggle="modal" data-bs-target="#DeletionModal">Deletar
+                    Batalha</button>
+
+            </div>
         </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Pokémun (2021)</h3>
-            <p class="card-text mb-0">
-              This cave is dangerous! There are monsters waiting to attack you at any time.
-              <br>
-              Do you think your partner can protect you? Good luck!
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 "
-              style='background-color: #45156c; border-color: #45156c;' disabled>PixelPAD (Python)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Web Game</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Commision</button>
-            <a href="https://pixelpad.io/app/ypafeqzfwla/" target="_blank" class="btn btn-block btn-success mt-1 mb-0"
-              role="button" aria-pressed="true"><i class="fas fa-gamepad"></i>
-              PixelPAD</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/flappythebird.gif" class="card-img" alt="A GIF DEMONSTRATION OF DRIFTERS DON'T BRAKE">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Flappy, the Bird (2021)</h3>
-            <p class="card-text mb-0">
-              Flap your wings to start flying, and avoid obstacles to accumulate points.
-              <br>
-              How far can you get without crashing on the pipes?
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 "
-              style='background-color: #45156c; border-color: #45156c;' disabled>PixelPAD (Python)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Web Game</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Commision</button>
-            <a href="https://pixelpad.io/app/oesdvbiekze/" target="_blank" class="btn btn-block btn-success mt-1 mb-0"
-              role="button" aria-pressed="true"><i class="fas fa-gamepad"></i>
-              PixelPAD</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/switchrockets2d.gif" class="card-img" alt="A GIF OF A MOBILE GAME">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Switch Rockets 2D (2020)</h3>
-            <p class="card-text mb-0">A hyper-casual game published on google play. On this game,
-              you have
-              to think fast and position your ships on the correct places to break through the barriers. One simple
-              mistake and your ship will explode!
-              <br> What is the highest score you can get?
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-primary btn-sm mb-1 " disabled>Unity (C#)</button>
-            <button type="button" class="btn btn-primary btn-sm mb-1 " disabled>Mobile</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Android</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Hyper-Casual</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Colorblind-friendly</button>
-            <a href="https://play.google.com/store/apps/details?id=com.ArthurRTeles.SwitchRockets2D&hl=en_US"
-              target="_blank" class="btn btn-block btn-success mt-1 mb-0" role="button" aria-pressed="true"><i
-                class="fab fa-google-play"></i>
-              Google Play</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/learena.gif" class="card-img" alt="A GIF OF AN RPG TURN-BASED GAME">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Learena (In Development)</h3>
-            <p class="card-text mb-0">As an instructor: Create amazing experiences to your students while applying
-              reviews and/or tests. Learena will
-              make your students ask fow new challenges! Try writting your review questions on the game and watch your
-              students getting really excited
-              with what you are teaching.
-              <br><br>As a student: Is there a better way of having tests and reviews than playing an RPG turn-based
-              game? Yes, you've read it
-              right! Instead of writing on a sheet for several minutes, why not to cooperate with your classmates to
-              defeat a boss on an
-              RPG game?
-              <br><br>
-            <p class="mb-2" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;">
-              <span class="comments">
-                Learena is a game that gamificates tests and reviews in-class. It is an RPG turn-based game where the
-                boss gives questions to the players. If a player answers the question right, he attacks the boss.
-                Students must work together to overcome the challenge.<br>
-                Please, check my Dev Blog on Reddit for more information!
-              </span>
-            </p>
-            <button type="button" class="btn btn-primary btn-sm mb-1 " disabled>Unity (C#)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Online Multiplayer</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Gamification</button>
-            <a href="https://www.reddit.com/r/LearenaTeachingGame/" target="_blank"
-              class="btn btn-block btn-warning mt-1 mb-0" role="button" aria-pressed="true"><i
-                class="fab fa-reddit-alien"></i>
-              Dev Blog</a>
-          </div>
-        </div>
-      </div>
-
-    </div> -->
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/warsteroid.gif" class="card-img"
-            alt="A GIF OF A PLANET CONTROLLING ASTEROID USING ITS ORBIT">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">[GameJam] Warsteroid (2020)</h3>
-            <p class="card-text mb-0">Use your planet's orbit to control asteroids and throw them on your opponents. You
-              can also
-              use your acceleration and slow skills to help you.
-              <br>Be careful. It's not as easy as it looks.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-primary btn-sm mb-1 " disabled>Unity (C#)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Local Multiplayer</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>GameJam</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Joystick Support</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>GameJaaj4</button>
-            <a href="http://jams.gamejolt.io/gamejaaj4/games/warsteroid/460191" target="_blank"
-              class="btn btn-block btn-success mt-1 mb-0" role="button" aria-pressed="true"><i
-                class="fas fa-gamepad"></i> GameJaaj4</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/chatclanwars.gif" class="card-img" alt="A GIF DEMONSTRATING HOW CHAT CLAN WARS WORKS">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Chat Clan Wars (2019)</h3>
-            <p class="card-text mb-0">Hello twitch streamer! This game was made for you to interact with your chat.
-              <br>Chat Clan Wars is an RTS game where each of your viewers can control his/her own player. Using
-              commands on the Twitch chat
-              like !join, !attack, or !build, they will have to work as a team to win the match.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 " disabled>GameMaker 2 (GML)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Online Multiplayer</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>TwitchChat</button>
-            <a href="https://arthurrteles.itch.io/chatclanwars" target="_blank"
-              class="btn btn-block btn-success mt-1 mb-0" role="button" aria-pressed="true"><i
-                class="fab fa-itch-io"></i> Itch.io</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/squarexsquare.gif" class="card-img"
-            alt="A GIF OF SQUARES FIGHTING EACH OTHER USING WAPONS">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Square x Square (2017)</h3>
-            <p class="card-text mb-0">Square x Square is a local PvP game (up to 4
-              players) where your objective is to defeat your opponents. You may choose a helmet, a weapon and a perk to
-              battle against your friends (or
-              enemies). On the stage, a chest is randomly generated. The player who collects the chest will trigger a
-              global random event.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 " disabled>GameMaker (GML)</button>
-            <button type="button" class="btn btn-primary btn-sm mb-1 " disabled>Steam</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Local Multiplayer</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Joystick Support</button>
-            <a href="https://store.steampowered.com/app/654750/Square_x_Square/" target="_blank"
-              class="btn btn-block btn-info mt-1 mb-0" role="button" aria-pressed="true"><i class="fab fa-steam"></i>
-              Steam</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Images/darrow.png" class="card-img" alt="AN IMAGE OF DARROW">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Darrow (2017)</h3>
-            <p class="card-text mb-0">Darrow is a project made in GameMaker: Studio to study Client-Server
-              communication.
-              <br> The server creates rooms to support 2 players. When both players join a room, the game starts.
-              When a room has already 2 players and another player log in, the server automatically creates another room
-              to accommodate the third player.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 " disabled>GameMaker (GML)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Online Multiplayer</button>
-            <a href="https://arthurrteles.itch.io/darrow" target="_blank" class="btn btn-block btn-success mt-1 mb-0"
-              role="button" aria-pressed="true"><i class="fab fa-itch-io"></i> Itch.io</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/jackinthemaze.gif" class="card-img" alt="A GAMEPLAY GIF OF JACK IN THE MAZE">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Jack In The Maze (2017)</h3>
-            <p class="card-text mb-0">Jack In The Maze is a survivor-like game where you have to clear all the stage to
-              get to a new one.
-              Also, you can get upgrades on your abilities and increase your stats. The objective of the game is to
-              survive the longest possible.
-              <br>
-              Collect green boxes to get ammo, and the white boxes to get life.
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 " disabled>GameMaker (GML)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Procedural Generation</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Endless</button>
-            <a href="https://arthurrteles.itch.io/jack-inthe-maze" target="_blank"
-              class="btn btn-block btn-success mt-1 mb-0" role="button" aria-pressed="true"><i
-                class="fab fa-itch-io"></i> Itch.io</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/chestcover.gif" class="card-img"
-            alt="A GIF OF A PLAYER SHOOTING AT ENEMIES TO PROTECT ITS CHEST">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">Chest Cover (2016)</h3>
-            <p class="card-text mb-0">Chest cover is an endless game which will store your best scores on each of the
-              stages you play. You will have to
-              protect the chest from the enemies to get more points. However, this task won’t be so easy since you have
-              to walk around
-              to get yourself more ammo. Also, enemies get stronger with time
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 " disabled>GameMaker (GML)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>Endless</button>
-            <a href="https://arthurrteles.itch.io/chest-cover" target="_blank"
-              class="btn btn-block btn-success mt-1 mb-0" role="button" aria-pressed="true"><i
-                class="fab fa-itch-io"></i> Itch.io</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card" style="margin-top: 10px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./Files/Gifs/monsteroid.gif" class="card-img" alt="A GIF SHOWING PLAYER'S SKILLS ON MONSTEROID">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body pb-2">
-            <h3 class="card-title mb-0">[GameJam] MonSTEROID (2015)</h3>
-            <p class="card-text mb-0">
-              You've been bullied on school for your whole life. Then, you decided to get stronger to beat all those
-              bullies up! The day has finally came!
-              <br>Use your five skills to get to the bullies and beat them up. Take care, they have many allies!
-
-            <p class="mt-5 mb-3" style="border-top: 1px rgb(192, 192, 192) solid; width: 98%; margin: 0px;"></p>
-
-            <button type="button" class="btn btn-success btn-sm mb-1 " disabled>GameMaker (GML)</button>
-            <button type="button" class="btn btn-dark btn-sm mb-1 " disabled>Windows</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>GameJam</button>
-            <button type="button" class="btn btn-secondary btn-sm mb-1 " disabled>LudumDare#33</button>
-            <a target="_blank" href="http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=55175"
-              class="btn btn-block btn-success mt-1 mb-0" role="button" aria-pressed="true">
-              <i class="fas fa-gamepad"></i> LudumDare</a>
-          </div>
-        </div>
-      </div>
-
 
     </div>
 
 
-  </div>
+    <!-- NEW VIDEO CUT -->
+    <div id="VideoCut" style="display:none;" class="mb-3 mt-3 mx-auto">
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+        <a class="btn btn-primary m-0" data-bs-toggle="collapse" id="collapseButton" href="#collapsedCutId"
+            role="button" style="width: 100%; font-size: 18px;">
+            Cut #1
+        </a>
+        <div class="collapse show collapsedContent" id="collapsedCutId">
+
+            <button type="button" class="btn btn-danger btn-sm mb-4 mt-2" id="DeleteCut"
+                style="width: 25%; min-width: 125px;" data-bs-toggle="modal" data-bs-target="#DeletionModal">Deletar
+                Corte</button>
+
+            <div class="row">
+                <div class="col">
+                    <!-- CUT TIMES -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h4>Tempo do Corte</h4>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h5 class="m-0" style="min-width: 40px;">De:</h5>
+                        <div id="TimingsFrom" class="input-group mt-0 d-flex justify-content-center"
+                            style="width: auto;">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5 class="m-0" style="min-width: 40px;">Até:</h5>
+                        <div id="TimingsTo" class="input-group mt-0 d-flex justify-content-center" style="width: auto;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- MCS HIGHLIGHT -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h4>Mcs Destaque</h4>
+                    </div>
+                    <div id="McHighlightList" class="d-flex flex-wrap align-items-center justify-content-center">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="w-75 mt-3 mx-auto" style="border-top: 1px solid rgba(0, 0, 0, 0.2);"></div>
+                    <!-- ADD TAGS -->
+                    <div id="VideoCutTags" class="mt-3 pb-3 mx-auto">
+                        <h4>Tags do Corte</h4>
+
+                        <div id="CutTags" class="d-flex flex-wrap align-items-center justify-content-center">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- NEW MC NAME FOR TAGS -->
+    <div id="McNameTag" style="display:none;" class="mb-1 mx-1">
+        <input type="checkbox" class="btn-check" id="mc1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="mc1">Mc Name</label><br>
+    </div>
+
+
+    <!-- NEW TAG NAME FOR TAGS -->
+    <div id="NameTag" style="display:none;" class="mb-1 mx-1">
+        <input type="checkbox" class="btn-check" id="mc1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="mc1">Name Tag</label><br>
+    </div>
+
+
+    <!-- NEW MC NAME -->
+    <div id="McName" style="display:none;" class="mb-1">
+        <div class="input-group">
+            <div class="d-flex align-items-center"
+                style="width: 50%; background-color: white; border-radius: 5px 0px 0px 5px; text-align: center; margin-left: auto; height: 30px;">
+                <p id="McNameText" class="m-0 w-100">Nome</p>
+            </div>
+            <button class="btn btn-danger d-flex align-items-center" type="button" id="RemoveMcName"
+                style="margin-right: auto; height: 30px;">Remover</button>
+        </div>
+    </div>
+
+
+    <!-- DELETION CONFIRMATION MODAL -->
+    <div class="modal fade" id="DeletionModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Tem certeza?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja deletar isso?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteButtonAction()"
+                        data-bs-dismiss="modal">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="allBattleNames.js"></script>
+    <script src="allTagsNames.js"></script>
+    <script src="allMcNames.js"></script>
+
+    <script src="dataExporter.js"></script>
+    <script src="autocompleteInput.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
